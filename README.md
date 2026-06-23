@@ -1,5 +1,9 @@
 # ShubPhygurath
 
+<p align="center">
+  <img src="assets/shubphygurath_logo.svg" width="260" alt="ShubPhygurath logo"/>
+</p>
+
 **Benchmarking protein language model embeddings against alignment-based phylogenetics.**
 
 ShubPhygurath provides a five-script pipeline that constructs phylogenetic trees from protein sequences via two independent routes — ESM-2 embeddings and multiple sequence alignment — and quantifies how closely those trees agree using standard topological and branch-length distance metrics.

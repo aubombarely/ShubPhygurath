@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <radialGradient id="bg" cx="40%" cy="35%" r="65%">
+      <stop offset="0%"   stop-color="#12082a"/>
+      <stop offset="100%" stop-color="#060310"/>
+    </radialGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="textglow" x="-20%" y="-60%" width="140%" height="220%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <circle cx="200" cy="200" r="196" fill="#040210"/>
+  <circle cx="200" cy="200" r="185" fill="url(#bg)"/>
+  <circle cx="200" cy="200" r="192" fill="none" stroke="#2a0a50" stroke-width="1.5"/>
+  <circle cx="200" cy="200" r="186" fill="none" stroke="#180635" stroke-width="0.6"/>
+
+  <!-- Stars -->
+  <g fill="#9988cc" opacity="0.45">
+    <circle cx="68"  cy="82"  r="1"/>
+    <circle cx="335" cy="68"  r="1.5"/>
+    <circle cx="82"  cy="318" r="1"/>
+    <circle cx="350" cy="310" r="1.5"/>
+    <circle cx="112" cy="358" r="1"/>
+    <circle cx="294" cy="363" r="1"/>
+    <circle cx="52"  cy="208" r="1"/>
+    <circle cx="373" cy="178" r="1"/>
+    <circle cx="314" cy="46"  r="1"/>
+    <circle cx="150" cy="41"  r="1.5"/>
+    <circle cx="40"  cy="148" r="1"/>
+    <circle cx="362" cy="248" r="1"/>
+  </g>
+
+  <!-- ── Shub-Niggurath goat horns at top (branching / tree roots) ─── -->
+  <!-- Left horn (curving up-left) -->
+  <path d="M 188,90 C 175,78 155,68 148,55 C 143,46 150,40 158,46 C 166,52 170,65 180,75"
+        fill="none" stroke="#9966ee" stroke-width="3.5"
+        stroke-linecap="round" filter="url(#glow)" opacity="0.82"/>
+  <!-- Left horn tip -->
+  <circle cx="148" cy="54" r="4" fill="#bb88ff" filter="url(#glow)" opacity="0.75"/>
+
+  <!-- Right horn (curving up-right) -->
+  <path d="M 212,90 C 225,78 245,68 252,55 C 257,46 250,40 242,46 C 234,52 230,65 220,75"
+        fill="none" stroke="#9966ee" stroke-width="3.5"
+        stroke-linecap="round" filter="url(#glow)" opacity="0.82"/>
+  <!-- Right horn tip -->
+  <circle cx="252" cy="54" r="4" fill="#bb88ff" filter="url(#glow)" opacity="0.75"/>
+
+  <!-- Horn base -->
+  <path d="M 180,75 C 188,82 200,88 212,90 C 220,82 220,78 212,90"
+        fill="none" stroke="#7744cc" stroke-width="2.5" opacity="0.60"/>
+
+  <!-- ── Bifurcating phylogenetic tree ─────────────────────────────── -->
+  <!-- Root -->
+  <circle cx="200" cy="108" r="5" fill="#9966ee" filter="url(#glow)" opacity="0.85"/>
+
+  <!-- Root → two main branches -->
+  <line x1="200" y1="113" x2="158" y2="142" stroke="#aaaaaa" stroke-width="1.2" opacity="0.35"/>
+  <line x1="200" y1="113" x2="242" y2="142" stroke="#aaaaaa" stroke-width="1.2" opacity="0.35"/>
+
+  <!-- ── LEFT subtree — EMBEDDING (teal) ─────────────────────────── -->
+  <circle cx="158" cy="142" r="4" fill="#2ec8a6" filter="url(#glow)" opacity="0.85"/>
+
+  <!-- Left-left branch -->
+  <line x1="158" y1="146" x2="128" y2="175" stroke="#2ec8a6" stroke-width="1.4" opacity="0.60"/>
+  <circle cx="128" cy="175" r="3.5" fill="#2ec8a6" opacity="0.80"/>
+  <line x1="128" y1="178" x2="112" y2="205" stroke="#2ec8a6" stroke-width="1.3" opacity="0.55"/>
+  <circle cx="112" cy="205" r="3" fill="#2ec8a6" opacity="0.75"/>
+  <line x1="128" y1="178" x2="142" y2="205" stroke="#2ec8a6" stroke-width="1.3" opacity="0.55"/>
+  <circle cx="142" cy="205" r="3" fill="#2ec8a6" opacity="0.75"/>
+
+  <!-- Left-right branch -->
+  <line x1="158" y1="146" x2="182" y2="175" stroke="#2ec8a6" stroke-width="1.4" opacity="0.60"/>
+  <circle cx="182" cy="175" r="3.5" fill="#2ec8a6" opacity="0.80"/>
+  <line x1="182" y1="178" x2="168" y2="205" stroke="#2ec8a6" stroke-width="1.3" opacity="0.55"/>
+  <circle cx="168" cy="205" r="3" fill="#2ec8a6" opacity="0.75"/>
+  <line x1="182" y1="178" x2="192" y2="205" stroke="#2ec8a6" stroke-width="1.3" opacity="0.55"/>
+  <circle cx="192" cy="205" r="3" fill="#2ec8a6" opacity="0.75"/>
+
+  <!-- Leaf labels (embedding side — small dots like protein embeddings) -->
+  <g fill="#2ec8a6" opacity="0.55">
+    <circle cx="112" cy="215" r="2.5"/>
+    <circle cx="142" cy="215" r="2.5"/>
+    <circle cx="168" cy="215" r="2.5"/>
+    <circle cx="192" cy="215" r="2.5"/>
+  </g>
+
+  <!-- Embedding label -->
+  <text x="152" y="232" font-family="'Courier New',monospace" font-size="8"
+        fill="#2ec8a6" text-anchor="middle" opacity="0.75">ESM-2 NJ</text>
+
+  <!-- ── RIGHT subtree — ALIGNMENT (amber/gold) ──────────────────── -->
+  <circle cx="242" cy="142" r="4" fill="#c8a83a" filter="url(#glow)" opacity="0.85"/>
+
+  <!-- Right-left branch -->
+  <line x1="242" y1="146" x2="218" y2="175" stroke="#c8a83a" stroke-width="1.4" opacity="0.60"/>
+  <circle cx="218" cy="175" r="3.5" fill="#c8a83a" opacity="0.80"/>
+  <line x1="218" y1="178" x2="208" y2="205" stroke="#c8a83a" stroke-width="1.3" opacity="0.55"/>
+  <circle cx="208" cy="205" r="3" fill="#c8a83a" opacity="0.75"/>
+  <line x1="218" y1="178" x2="232" y2="205" stroke="#c8a83a" stroke-width="1.3" opacity="0.55"/>
+  <circle cx="232" cy="205" r="3" fill="#c8a83a" opacity="0.75"/>
+
+  <!-- Right-right branch -->
+  <line x1="242" y1="146" x2="268" y2="175" stroke="#c8a83a" stroke-width="1.4" opacity="0.60"/>
+  <circle cx="268" cy="175" r="3.5" fill="#c8a83a" opacity="0.80"/>
+  <line x1="268" y1="178" x2="258" y2="205" stroke="#c8a83a" stroke-width="1.3" opacity="0.55"/>
+  <circle cx="258" cy="205" r="3" fill="#c8a83a" opacity="0.75"/>
+  <line x1="268" y1="178" x2="282" y2="205" stroke="#c8a83a" stroke-width="1.3" opacity="0.55"/>
+  <circle cx="282" cy="205" r="3" fill="#c8a83a" opacity="0.75"/>
+
+  <!-- Leaf labels (alignment side — small horizontal bars like MSA columns) -->
+  <g stroke="#c8a83a" stroke-width="2" opacity="0.55">
+    <line x1="207" y1="215" x2="214" y2="215"/>
+    <line x1="237" y1="215" x2="244" y2="215"/>
+    <line x1="257" y1="215" x2="264" y2="215"/>
+    <line x1="281" y1="215" x2="288" y2="215"/>
+  </g>
+
+  <!-- Alignment label -->
+  <text x="248" y="232" font-family="'Courier New',monospace" font-size="8"
+        fill="#c8a83a" text-anchor="middle" opacity="0.75">MSA ML</text>
+
+  <!-- RF distance annotation (between the two trees) -->
+  <text x="200" y="250" font-family="'Courier New',monospace" font-size="8"
+        fill="#7755aa" text-anchor="middle" opacity="0.80">RF distance</text>
+  <!-- Double-headed arrow -->
+  <line x1="155" y1="256" x2="245" y2="256" stroke="#7755aa" stroke-width="1" opacity="0.55"/>
+  <polygon points="155,253 148,256 155,259" fill="#7755aa" opacity="0.55"/>
+  <polygon points="245,253 252,256 245,259" fill="#7755aa" opacity="0.55"/>
+
+  <!-- ── Legend ─────────────────────────────────────────────────────── -->
+  <g font-family="'Courier New',Courier,monospace" font-size="8" fill="#776699">
+    <circle cx="148" cy="272" r="3.5" fill="#2ec8a6" opacity="0.80"/>
+    <text x="155" y="275">Embedding (ESM-2)</text>
+    <circle cx="148" cy="284" r="3.5" fill="#c8a83a" opacity="0.80"/>
+    <text x="155" y="287">Alignment (MAFFT)</text>
+  </g>
+
+  <!-- Separator -->
+  <line x1="105" y1="295" x2="295" y2="295" stroke="#2a1050" stroke-width="0.8"/>
+
+  <!-- Title -->
+  <text x="200" y="320"
+        font-family="'Courier New',Courier,monospace"
+        font-size="22" font-weight="bold"
+        fill="#e0d0ff" text-anchor="middle" letter-spacing="1.5"
+        filter="url(#textglow)">ShubPhygurath</text>
+
+  <text x="200" y="342"
+        font-family="'Courier New',Courier,monospace"
+        font-size="9.5" fill="#553388"
+        text-anchor="middle" letter-spacing="1.2">Embeddings  ·  Phylogenetics  ·  RF</text>
+
+</svg>
