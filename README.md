@@ -23,28 +23,43 @@ Alignment-free methods based on protein language model (PLM) embeddings have eme
 
 ## Requirements
 
-### Python packages
+### Conda environment
+
+Create a dedicated environment and install all dependencies in one go:
 
 ```bash
-pip install fair-esm torch numpy scipy biopython dendropy matplotlib
+conda create -n shubphygurath python=3.10
+conda activate shubphygurath
+
+# Scientific core + bioinformatics packages
+conda install -c conda-forge -c bioconda \
+    numpy scipy matplotlib biopython dendropy
+
+# PyTorch — choose one:
+# CPU only
+conda install -c pytorch pytorch cpuonly
+# GPU (CUDA 12.1)
+conda install -c pytorch -c nvidia pytorch pytorch-cuda=12.1
+
+# Alignment and tree inference tools
+conda install -c bioconda mafft muscle fasttree iqtree
+
+# ESM-2 (not on conda; install via pip into the active environment)
+pip install fair-esm
 ```
 
-| Package | Used by |
-|---|---|
-| `fair-esm`, `torch` | EmbedProteins |
-| `numpy`, `scipy` | EmbedProteins, EmbedTree |
-| `biopython` | EmbedTree, PlotTrees |
-| `dendropy` | CompareTrees |
-| `matplotlib` | PlotTrees |
-
-### External tools
-
-| Tool | Used by | Install |
+| Package | Channel | Used by |
 |---|---|---|
-| MAFFT | AlignTree (`--aligner mafft`) | `conda install -c bioconda mafft` |
-| MUSCLE | AlignTree (`--aligner muscle`) | `conda install -c bioconda muscle` |
-| FastTree | AlignTree (`--tree_tool fasttree`) | `conda install -c bioconda fasttree` |
-| IQ-TREE 2 | AlignTree (`--tree_tool iqtree`) | `conda install -c bioconda iqtree` |
+| `numpy`, `scipy` | conda-forge | EmbedProteins, EmbedTree |
+| `matplotlib` | conda-forge | PlotTrees |
+| `biopython` | bioconda | EmbedTree, PlotTrees |
+| `dendropy` | conda-forge | CompareTrees |
+| `pytorch` | pytorch | EmbedProteins |
+| `fair-esm` | pip | EmbedProteins |
+| `mafft` | bioconda | AlignTree |
+| `muscle` | bioconda | AlignTree |
+| `fasttree` | bioconda | AlignTree |
+| `iqtree` | bioconda | AlignTree |
 
 ---
 
