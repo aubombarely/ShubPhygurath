@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "ShubPhygurath"
+abstract: >
+  ShubPhygurath benchmarks protein language model embeddings (ESM-2) against
+  classical alignment-based phylogenetics by building trees via both approaches
+  and comparing their topology and branch-length distances using Robinson-Foulds
+  and weighted RF metrics. Named after Shub-Niggurath (H.P. Lovecraft) +
+  Phylo (phylogenetics).
+authors:
+  - family-names: Bombarely
+    given-names: Aureliano
+    email: aubombarely@gmail.com
+    orcid: ""
+version: "v0.1.0"
+date-released: "2026-06-24"
+license: MIT
+repository-code: "https://github.com/aubombarely/ShubPhygurath"
+keywords:
+  - phylogenetics
+  - protein language model
+  - ESM-2
+  - tree comparison
+  - bioinformatics
